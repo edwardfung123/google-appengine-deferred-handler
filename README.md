@@ -12,7 +12,7 @@ Here is some simplified version. Just to illustrate the idea.
 
 `main.py`:
 
-```
+```python
 import webapp2
 def func_run_in_bg(val):
   import logging
@@ -40,7 +40,7 @@ app = webapp2.WSGIApplication([
 
 `app.yaml`:
 
-```
+```yaml
 runtime: python27
 api_version: 1
 threadsafe: true
@@ -81,7 +81,7 @@ Here is the example:
 
 `main2.py`:
 
-```
+```python
 import webapp2
 
 def func_run_in_bg(val):
@@ -126,7 +126,7 @@ However, we still need to print the deferred function name explicitly in the fun
 
 The default deferred TaskHandler is not that extensible. It turns out that I need to copy and paste the source code and reinvent the wheel a bit. Hopefully, I just need to do this once...
 
-```
+```python
 import webapp2
 
 def func_run_in_bg(val):
